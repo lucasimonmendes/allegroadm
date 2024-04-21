@@ -1,132 +1,42 @@
-/**
 :root {
   --text: #050316;
   --background: #fbfbfe;
   --primary: #2f27ce;
   --secondary: #dddbff;
   --accent: #443dff;
+  --success: #32d979;
+  --error: #d93e32;
 }
-**/
+
+/**
 :root {
   --text: #eae9fc;
   --background: #010104;
   --primary: #3a31d8;
   --secondary: #020024;
   --accent: #0600c2;
+  --success: #32d979;
+  --error: #d93e32;
 }
-.poppins-thin {
-  font-family: "Poppins", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
-.poppins-extralight {
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-style: normal;
-}
-
-.poppins-light {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.poppins-regular {
+**/
+.font-regular {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.poppins-medium {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.poppins-semibold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.poppins-bold {
+.font-bold {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-style: normal;
-}
-
-.poppins-extrabold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  font-style: normal;
-}
-
-.poppins-black {
-  font-family: "Poppins", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.poppins-thin-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.poppins-extralight-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-style: italic;
-}
-
-.poppins-light-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.poppins-regular-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.poppins-medium-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.poppins-semibold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: italic;
-}
-
-.poppins-bold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.poppins-extrabold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  font-style: italic;
-}
-
-.poppins-black-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 900;
-  font-style: italic;
 }
 
 :root {
   font-family: Poppins;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 24px;
   font-weight: 400;
+  box-sizing: border-box;
 
   color: var(--text);
   background-color: var(--background);
@@ -143,6 +53,23 @@
   padding-top: 10vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.form {
+  margin: 0;
+  padding-top: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.items-center {
+  display: flex;
+  align-items: center;
   justify-content: center;
   text-align: center;
 }
@@ -173,63 +100,79 @@ a:hover {
   color: var(--secondary-500);
 }
 
-h1 {
+.text-center {
   text-align: center;
 }
 
-input,
-button {
+.logo-primary {
+  color: var(--primary);
+}
+
+.accent {
+  color: var(--accent);
+}
+.error {
+  color: var(--error);
+}
+.success {
+  color: var(--success);
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.body {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.small {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.input,
+.button {
+  max-width: 500px;
+  margin: 8px 8px;
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  padding: 0.6em 1.4em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  color: #0f0f0f;
-  background-color: #ffffff;
+  color: var(--text);
+  text-decoration: none;
+  background-color: var(--background);
   transition: border-color 0.25s;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
 
-button {
+.button {
   cursor: pointer;
 }
 
-button:hover {
-  border-color: var(--primary);
-}
-button:active {
-  border-color: var(--accent);
-  background-color: var(--text);
+.button:hover {
+  border-color: var(--secondary);
+  background-color: var(--secondary);
 }
 
-input,
-button {
+.input,
+.button {
   outline: none;
 }
 
 #greet-input {
   margin-right: 5px;
 }
-
-/**
-@media (prefers-color-scheme: dark) {
-  :root {
-    color: #f6f6f6;
-    background-color: #2f2f2f;
-  }
-
-  a:hover {
-    color: #24c8db;
-  }
-
-  input,
-  button {
-    color: #ffffff;
-    background-color: #0f0f0f98;
-  }
-  button:active {
-    background-color: #0f0f0f69;
-  }
-}
-**/
